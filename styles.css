@@ -1,0 +1,152 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --Paleblue: hsl(225, 100%, 94%);
+  --Brightblue: hsl(245, 75%, 52%);
+  --Verypaleblue: hsl(225, 100%, 98%);
+  --Desaturatedblue: hsl(224, 23%, 55%);
+  --Darkblue: hsl(223, 47%, 23%);
+}
+
+body {
+  display: flex;
+  margin: 0;
+  font-family: 'Red Hat Display', sans-serif;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--Paleblue);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.card {
+  width: 450px;
+  height: 697px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.wrapper {
+  padding: 0 48px;
+  text-align: center;
+}
+
+.hero-image {
+  background-image: url(./images/illustration-hero.svg);
+  width: 100%;
+  height: 220px;
+  border-radius: 20px 20px 0 0;
+}
+
+.card h1 {
+  font-size: 1.75rem;
+  color: var(--Darkblue);
+  margin-top: 45px;
+  font-weight: 900;
+}
+
+.card p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--Desaturatedblue);
+  line-height: 26px;
+  margin-top: 17px;
+}
+
+.card .order-status {
+  display: flex;
+  width: 100%;
+  padding: 24px 24px 20px 24px;
+  background-color: var(--Verypaleblue);
+  border-radius: 10px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.card .order-status p {
+  margin: 0;
+}
+
+.plan-price {
+  margin-left: 20px;
+}
+
+.change {
+  margin-left: auto;
+}
+
+p.plan {
+  font-weight: 900;
+  color: var(--Darkblue);
+}
+
+p.price {
+  font-weight: 500;
+  color: var(--Desaturatedblue);
+}
+
+a {
+  color: var(--Brightblue);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+button {
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  display: inline-block;
+  font-size: 0.938rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+button.pay {
+  color: white;
+  background-color: var(--Brightblue);
+  margin-top: 32px;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px rgba(56, 42, 225, 0.1903);
+}
+
+button.cancel {
+  margin-top: 15px;
+  background: transparent;
+  color: var(--Desaturatedblue);
+}
+
+a:hover {
+  color: hsla(245, 83%, 68%, 1);
+  text-decoration: none;
+}
+
+button.pay:hover {
+  background-color: hsla(245, 83%, 68%, 1);
+}
+
+button.cancel:hover {
+  color: hsla(223, 47%, 23%, 1);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url(./images/pattern-background-mobile.svg);
+  }
+}
